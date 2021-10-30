@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.main {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(galaxy.jpg);
+  background-size: 100%;
+  /* background-size: cover; */
+}
+
+.header-title {
+  margin-top: 25px;
+  font-size: calc(20px + 1.5vw);
+  text-shadow: 3px 3px 2px black;
+}
+
+.title {
+  font-size: 2em;
+  text-shadow: 3px 3px 2px black;
+}
+
+.planet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  transition: all 0.2s;
+  transform-origin: top center;
+  margin-bottom: 25px;
+}
+
+.planet-card:hover {
+  color: #fdd835;
+  transform: scale(1.2);
+}
+
+.planet-name {
+  font-size: 1.2em;
+}
+
+.planets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0 0 0;
+}
+
+.planets {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-planet {
+  width: 100%;
+}
+
+.missions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+  text-shadow: 3px 3px 2px black;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 70px;
+  justify-content: center;
+}
+
+.mission-card {
+  position: relative;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  width: 250px;
+  height: 150px;
+  margin: 10px;
+  justify-content: center;
+  line-height: 30px;
+  background-color: rgba(14, 14, 14, 0.685);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mission-card:hover .show-on-hover {
+  height: 110px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mission-card:hover .mission-name:not(.inside) {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.show-on-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.mission-name {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.mission-country {
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(63, 63, 63);
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px #2db2ff;
+}
